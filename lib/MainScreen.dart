@@ -26,7 +26,7 @@ class _MainScreenState extends State<MainScreen> {
 
   void playVideo() {
     FlutterYoutube.playYoutubeVideoByUrl(
-        apiKey: 'AIzaSyDc1hCen9iG3B95E5EVj_TyBKdEaKQNGxU',
+        apiKey: 'your API key goes here',         //Enter your API key
         videoUrl: 'https://www.youtube.com/watch?v=_fh64GbFSw4',
         fullScreen: true);
   }
