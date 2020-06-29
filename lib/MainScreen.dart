@@ -11,6 +11,17 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: Container(
         color: Colors.white,
+        child: Center(
+          child: FlatButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => YoutubeScreen()),
+              );
+            },
+            child: Text('Play video from youtube'),
+          ),
+        ),
       ),
     );
   }
