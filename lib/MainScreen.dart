@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_youtube/flutter_youtube.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -12,17 +13,21 @@ class _MainScreenState extends State<MainScreen> {
       body: Container(
         color: Colors.white,
         child: Center(
-          child: FlatButton(
+          child: RaisedButton(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => YoutubeScreen()),
-              );
+              playVideo();
             },
             child: Text('Play video from youtube'),
           ),
         ),
       ),
     );
+  }
+
+  void playVideo() {
+    FlutterYoutube.playYoutubeVideoByUrl(
+        apiKey: 'AIzaSyDc1hCen9iG3B95E5EVj_TyBKdEaKQNGxU',
+        videoUrl: 'https://www.youtube.com/watch?v=_fh64GbFSw4',
+        fullScreen: true);
   }
 }
